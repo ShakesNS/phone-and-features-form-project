@@ -1,0 +1,78 @@
+﻿<Window x:Class="_1521.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1521"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="391.412" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="LbListe" Grid.Column="0" DisplayMemberPath="MarkaModel">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="Ctsil" Header="Sil"/>
+                    <MenuItem x:Name="Ctgöster" Header="Tüm Özellikleri Göster"/>
+
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Marka:" Width="85"/>
+                <TextBox x:Name="TbMarka" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Model:" Width="85"/>
+                <TextBox x:Name="TbModel" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Ram Kapasitesi:" Width="85"/>
+                <TextBox x:Name="TbRam" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Arka Kamera:" Width="85"/>
+                <TextBox x:Name="TbArkaKamera" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Ön Kamera:" Width="85"/>
+                <TextBox x:Name="TbÖnKamera" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Depolama:" Width="85"/>
+                <TextBox x:Name="TbDepolama" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Yazılım:" Width="85"/>
+                <TextBox x:Name="TbYazılım" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Çekirdek:" Width="85"/>
+                <TextBox x:Name="TbÇekirdek" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Sim Kart:" Width="85"/>
+                <TextBox x:Name="TbSimKart" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Sd Kart:" Width="85"/>
+                <TextBox x:Name="TbSdKart" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="BtnKaydet" Content="Kaydet" Width="50" Margin="10"/>
+                <Button x:Name="BtnYenile" Content="Yenile" Width="50" Margin="10"/>
+                <Button x:Name="BtnSil" Content="Sil" Width="50" Margin="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="TbKaydedildi" Text="KAYDEDİLDİ" HorizontalAlignment="Center" Margin="10" Visibility="Collapsed"/>
+                <TextBlock x:Name="TbSilindi" Text="Silindi" HorizontalAlignment="Center" Margin="10" Visibility="Collapsed" />
+
+
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
